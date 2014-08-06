@@ -55,7 +55,7 @@
             xhr.onreadystatechange = function (e){
                 if(xhr.status===200 && xhr.status === 200){
                     var obj = JSON.parse(xhr.responseText);
-                    console.log(obj);
+                    //console.log(obj);
                     var table = createTable(obj);
 
                     document.body.appendChild(table);
@@ -85,9 +85,24 @@
                 for(var k=0;k<headers.length;k++){ //Consider all existing attributes
                         //console.log(obj[j][headers[k]]);
                         if(obj[j][headers[k]]){
-                            var tdr = document.createElement('td');
-                            tdr.innerHTML = obj[j][headers[k]];
-                            tr.appendChild(tdr);
+                           // console.log(Object.prototype.toString.call(obj[j][headers[k]]));
+                            if(Object.prototype.toString.call(obj[j][headers[k]]) === "[object Object]")
+                            {
+                                //console.log('Object found');
+                                var arr= [];
+                                for(var prop in obj[j][headers[k]]){
+                                    //console.log(obj[j][headers[k]][prop]);
+                                    arr.push((obj[j][headers[k]])[prop]);
+                                }
+                                var tdr = document.createElement('td');
+                                tdr.innerHTML = arr.join(',');
+                                tr.appendChild(tdr);
+                            }
+                            else{
+                                tdr = document.createElement('td');
+                                tdr.innerHTML = obj[j][headers[k]];
+                                tr.appendChild(tdr);
+                            }
 
                         }
                         else{

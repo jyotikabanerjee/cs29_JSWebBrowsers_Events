@@ -43,21 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableOnTheFly.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TableOnTheFly.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TableOnTheFly.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="780" max-vertical-offset="1770">
-              <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.24" vertical-offset="1215" max-vertical-offset="1995">
+              <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="valid_input.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="valid_input.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/valid_input.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6" vertical-offset="420" max-vertical-offset="945">
-              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+            <state vertical-scroll-proportion="-2.2448978" vertical-offset="385" max-vertical-offset="1020">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -75,8 +75,8 @@
       <list>
         <option value="$PROJECT_DIR$/HelloWorld.js" />
         <option value="$PROJECT_DIR$/dynamicScriptGeneration.html" />
-        <option value="$PROJECT_DIR$/TableOnTheFly.html" />
         <option value="$PROJECT_DIR$/valid_input.html" />
+        <option value="$PROJECT_DIR$/TableOnTheFly.html" />
       </list>
     </option>
   </component>
@@ -257,18 +257,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TableOnTheFly.html">
+    <entry file="file://$PROJECT_DIR$/valid_input.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="780" max-vertical-offset="1770">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        <state vertical-scroll-proportion="-2.2448978" vertical-offset="385" max-vertical-offset="1020">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/valid_input.html">
+    <entry file="file://$PROJECT_DIR$/TableOnTheFly.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6" vertical-offset="420" max-vertical-offset="945">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.24" vertical-offset="1215" max-vertical-offset="1995">
+          <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
           <folding />
         </state>
       </provider>
