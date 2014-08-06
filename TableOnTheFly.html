@@ -3,29 +3,72 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Table Generation</title>
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+            font: 300 1em 'Helvetica Neue';
+        }
+
+        table{
+            border: 1px solid black;
+            font: 300 1em 'Helvetica Neue';
+        }
+
+        th{
+            border: 1px solid black;
+            font: 500 0.85em 'Helvetica Neue';
+
+        }
+
+        tr{
+            /*border: 1px solid black;*/
+            font: 300 1em 'Helvetica Neue';
+        }
+
+        td{
+            border: 1px solid black;
+            font: 300 1em 'Helvetica Neue';
+        }
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
             var xhr = new XMLHttpRequest();
             xhr.open('GET','http://restcountries.eu/rest/v1');
             xhr.onreadystatechange = function (e){
                 if(xhr.status===200 && xhr.status === 200){
                     var obj = JSON.parse(xhr.responseText);
-                    console.log(obj);
-
-
+                    //  console.log(obj);
                     var table = createTable(obj);
 
+                    document.body.appendChild(table);
                 }
             };
             xhr.send();
 
+        });
 
-            function createTable(obj){
+        function createTable(obj){
 
+            var headers = Object.keys(obj[0]);
+            //console.log(obj[0]);
+            console.log(headers);
+            var tbl = document.createElement('table');
+            var th = document.createElement('th');
+            for(var i=0;i<headers.length;i++){
+                var td = document.createElement('td');
+                td.innerHTML = headers[i].toUpperCase();
+                th.appendChild(td);
             }
 
+            tbl.appendChild(th);
 
-        });
+
+            return tbl;
+        }
+
+
     </script>
 </head>
 <body>
