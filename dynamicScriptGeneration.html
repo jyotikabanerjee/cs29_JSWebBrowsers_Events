@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dynamic Script Generation</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sc = document.createElement('script');
+            sc.src = "HelloWorld.js";
+            document.getElementsByTagName('head')[0].appendChild(sc);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
