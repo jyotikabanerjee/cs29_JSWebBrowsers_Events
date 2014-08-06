@@ -51,7 +51,7 @@
         document.addEventListener('DOMContentLoaded', function() {
 
             var xhr = new XMLHttpRequest();
-            xhr.open('GET','http://restcountries.eu/rest/v1');
+            xhr.open('GET','http://uitr.herokuapp.com/countries');
             xhr.onreadystatechange = function (e){
                 if(xhr.status===200 && xhr.status === 200){
                     var obj = JSON.parse(xhr.responseText);
