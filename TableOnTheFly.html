@@ -13,6 +13,8 @@
         table{
             border: 1px solid black;
             font: 300 1em 'Helvetica Neue';
+            padding: 0.25em;
+            border-collapse: collapse;
         }
 
         th{
@@ -21,14 +23,28 @@
 
         }
 
+        th > td{
+            border: 1px solid black;
+            font: 500 0.85em 'Helvetica Neue';
+            width: 50px;
+            background-color: #eee;
+            box-shadow: 1px 1px 1px 1px gray;
+            margin: 5px;
+
+        }
+
         tr{
-            /*border: 1px solid black;*/
+            border: 1px solid black;
             font: 300 1em 'Helvetica Neue';
+
         }
 
         td{
             border: 1px solid black;
             font: 300 1em 'Helvetica Neue';
+            margin: 0 auto;
+
+            width: 50px;
         }
     </style>
     <script>
@@ -39,7 +55,7 @@
             xhr.onreadystatechange = function (e){
                 if(xhr.status===200 && xhr.status === 200){
                     var obj = JSON.parse(xhr.responseText);
-                    //  console.log(obj);
+                    console.log(obj);
                     var table = createTable(obj);
 
                     document.body.appendChild(table);
@@ -55,15 +71,35 @@
             //console.log(obj[0]);
             console.log(headers);
             var tbl = document.createElement('table');
-            var th = document.createElement('th');
+            var th = document.createElement('tr');
             for(var i=0;i<headers.length;i++){
-                var td = document.createElement('td');
-                td.innerHTML = headers[i].toUpperCase();
-                th.appendChild(td);
+                var tdh = document.createElement('td');
+                tdh.innerHTML = headers[i].toUpperCase();
+                th.appendChild(tdh);
             }
-
             tbl.appendChild(th);
 
+
+            for(var j=0; j<obj.length; j++){ //For every country object
+                var tr = document.createElement('tr');
+                for(var k=0;k<headers.length;k++){ //Consider all existing attributes
+                        //console.log(obj[j][headers[k]]);
+                        if(obj[j][headers[k]]){
+                            var tdr = document.createElement('td');
+                            tdr.innerHTML = obj[j][headers[k]];
+                            tr.appendChild(tdr);
+
+                        }
+                        else{
+                            tdr = document.createElement('td');
+                            tdr.innerHTML = "";
+                            tr.appendChild(tdr);
+
+                        }
+                }
+
+                tbl.appendChild(tr);
+            }
 
             return tbl;
         }
